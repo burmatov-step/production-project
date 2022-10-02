@@ -4,7 +4,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import PageError from './PageError';
 
-
 export default {
     title: 'widget/PageError',
     component: PageError,

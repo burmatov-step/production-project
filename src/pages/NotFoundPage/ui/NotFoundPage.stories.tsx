@@ -4,7 +4,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { NotFoundPage } from './NotFoundPage';
 
-
 export default {
     title: 'pages/NotFoundPage',
     component: NotFoundPage,
