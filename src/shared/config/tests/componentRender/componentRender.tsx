@@ -9,9 +9,8 @@ export interface componentRenderOptions {
 }
 
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
-
     const {
-        route = '/'
+        route = '/',
     } = options;
 
     return render(
