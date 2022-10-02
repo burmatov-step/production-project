@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 jobs:
   pipline:
-    runs-on: macos
+    runs-on: macOS 10.15
     strategy:
       matrix:
         node-version: [ 16.x ]
