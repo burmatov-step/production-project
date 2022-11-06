@@ -2,10 +2,12 @@
 @import "theme/dark";
 @import "theme/normal";
 @import "variables/global";
+
 body{
     font: var(--font-m);
     color: var(--primary-color);
 }
+
 .app {
     min-height: 100vh;
     background: var(--bg-color);
