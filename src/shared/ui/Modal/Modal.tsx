@@ -8,6 +8,7 @@ import cls from './Modal.module.scss';
 
 interface ModalProps{
     className?: string;
+    lazy?: boolean;
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
@@ -21,9 +22,10 @@ export const Modal = (props: ModalProps) => {
         children,
         isOpen,
         onClose,
+        lazy
 
     } = props;
-
+    const [isMounted, setIsMounted] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
@@ -54,6 +56,14 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
+    useEffect(() =>{
+        console.log('isOpen', isOpen)
+        if(isOpen){
+            setIsMounted(true)
+        }
+
+    }, [isOpen]);
+
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
@@ -62,6 +72,10 @@ export const Modal = (props: ModalProps) => {
     const onContentClick = (e:React.MouseEvent) => {
         e.stopPropagation();
     };
+
+    if(lazy && !isMounted){
+        return null;
+    }
 
     return (
         <Portal>

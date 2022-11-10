@@ -14,7 +14,7 @@ const MainPage = () => {
         <div>
             {t('Главная страница')}
             {/* <Counter /> */}
-        <Input value={value} onChange={onChange} />
+        <Input placeholder={'Введите текст'} value={value} onChange={onChange} />
         </div>
     );
 };
