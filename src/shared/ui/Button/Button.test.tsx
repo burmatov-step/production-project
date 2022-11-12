@@ -7,7 +7,7 @@ describe('Button', () => {
         expect(screen.getByText('TEST')).toBeInTheDocument();
     });
 
-    test('test rfender theme', () => {
+    test('test render theme', () => {
         render(<Button theme={ButtonTheme.CLEAR}>TEST</Button>);
         expect(screen.getByText('TEST')).toHaveClass('clear');
         screen.debug();

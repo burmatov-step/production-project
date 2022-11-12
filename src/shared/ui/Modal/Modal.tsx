@@ -22,7 +22,7 @@ export const Modal = (props: ModalProps) => {
         children,
         isOpen,
         onClose,
-        lazy
+        lazy,
 
     } = props;
     const [isMounted, setIsMounted] = useState(false);
@@ -56,12 +56,11 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
-    useEffect(() =>{
-        console.log('isOpen', isOpen)
-        if(isOpen){
-            setIsMounted(true)
+    useEffect(() => {
+        console.log('isOpen', isOpen);
+        if (isOpen) {
+            setIsMounted(true);
         }
-
     }, [isOpen]);
 
     const mods: Record<string, boolean> = {
@@ -73,7 +72,7 @@ export const Modal = (props: ModalProps) => {
         e.stopPropagation();
     };
 
-    if(lazy && !isMounted){
+    if (lazy && !isMounted) {
         return null;
     }
 

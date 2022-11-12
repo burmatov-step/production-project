@@ -34,7 +34,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'linebreak-style': 0,
-    "i18next/no-literal-string": ['error', {
+    'jsx-a11y/no-autofocus': 'off',
+    "i18next/no-literal-string": ['warn', {
       markupOnly: true,
       ignoreAttribute: ['data-testid', 'to']
     }],

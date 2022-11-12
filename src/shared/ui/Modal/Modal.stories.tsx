@@ -5,7 +5,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { Modal } from './Modal';
 
-
 export default {
     title: 'shared/Modal',
     component: Modal,
@@ -27,4 +26,4 @@ Dark.args = {
     isOpen: true,
     children: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi officiis sequi, libero dolore odio esse delectus in quisquam harum totam laboriosam perspiciatis repellendus eum dolores dolor beatae voluptate itaque quod.',
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

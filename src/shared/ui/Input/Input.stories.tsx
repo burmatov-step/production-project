@@ -18,6 +18,5 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
     placeholder: 'Type text',
-    value: 'dsdsdsds'
+    value: 'dsdsdsds',
 };
-
